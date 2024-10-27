@@ -35,10 +35,16 @@
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
                 <version>1.2.1</version>
                 <configuration>
-                    <sourceDirectory>${basedir}/src/main/resources/json</sourceDirectory>
-                    <targetPackage>entity</targetPackage>
+                    <sourceDirectory>${basedir}/json</sourceDirectory>
+                    <!--指定生成的java所在目录-->
+                    <outputDirectory>${basedir}/java</outputDirectory>
+                    <!--指定java的包名-->
+                    <targetPackage></targetPackage>
                     <sourceType>json</sourceType>
                     <annotationStyle>none</annotationStyle>
+                    <includeGeneratedAnnotation>false</includeGeneratedAnnotation>
+                    <!--使用基本类型-->
+                    <usePrimitives>false</usePrimitives>
                     <includeGetters>false</includeGetters>
                     <includeSetters>false</includeSetters>
                     <includeToString>false</includeToString>
