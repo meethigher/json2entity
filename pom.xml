@@ -37,7 +37,7 @@
                 <configuration>
                     <sourceDirectory>${basedir}/json</sourceDirectory>
                     <!--指定生成的java所在目录-->
-                    <outputDirectory>${basedir}/java</outputDirectory>
+                    <outputDirectory>${basedir}/src/main/java</outputDirectory>
                     <!--指定java的包名-->
                     <targetPackage></targetPackage>
                     <sourceType>json</sourceType>
@@ -60,17 +60,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-
         </plugins>
-
     </build>
 
 </project>
